@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vladimir Vutov, PhD</title>
+  <meta name="description" content="Vladimir Vutov --machine learning, statistics and MLOps projects.">
+ <link rel="icon" href="https://avatars.githubusercontent.com/u/89644500?v=4"> 
+  <style>
+    :root {
+      --bg: #faf8f5;
+      --surface: #ffffff;
+      --text: #1d1c1a;
+      --muted: #6b675f;
+      --accent: #d9480f;
+      --border: #e8e3da;
+      --max: 760px;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #151412;
+        --surface: #1e1c19;
+        --text: #eeebe5;
+        --muted: #a39e94;
+        --accent: #ff8a4c;
+        --border: #2e2b27;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.65;
+      font-size: 17px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* Nav */
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
+    nav .logo { font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
+    nav ul { display: flex; gap: 22px; list-style: none; font-size: 15px; }
+    nav ul a { color: var(--muted); }
+    nav ul a:hover { color: var(--text); text-decoration: none; }
+
+    /* Hero */
+    .hero { padding: 56px 0 56px; }
+    .avatar {
+      width: 84px; height: 84px; border-radius: 50%;
+      border: 2px solid var(--border); margin-bottom: 22px; display: block;
+    }
+    .hero .hello { color: var(--accent); font-size: 14px; margin-bottom: 12px; }
+    .hero h1 {
+      font-size: clamp(2.2rem, 7vw, 3.4rem);
+      line-height: 1.1; letter-spacing: -0.035em; margin-bottom: 20px;
+    }
+    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 36em; }
+    .hero .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 10px 18px; border-radius: 8px;
+      font-weight: 600; font-size: 15px; border: 1px solid var(--border);
+      color: var(--text); background: var(--surface); transition: transform .15s;
+    }
+    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+    .btn:hover { text-decoration: none; transform: translateY(-1px); }
+
+    /* Sections */
+    section { padding: 48px 0; border-top: 1px solid var(--border); }
+    h2 {
+      font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;
+      color: var(--muted); margin-bottom: 24px; font-weight: 600;
+    }
+    section > .wrap > p + p { margin-top: 14px; }
+
+    .skills { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .skills span {
+      font-size: 13px; padding: 4px 10px; border-radius: 999px;
+      background: var(--surface); border: 1px solid var(--border); color: var(--muted);
+    }
+
+    /* Projects */
+    .projects { display: grid; gap: 16px; }
+    .project {
+      display: block; padding: 22px 24px; border-radius: 12px;
+      background: var(--surface); border: 1px solid var(--border);
+      color: var(--text); transition: border-color .15s, transform .15s;
+    }
+    .project:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
+    .project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
+    .project h3 { font-size: 1.1rem; }
+    .project .repo { font-size: 12px; color: var(--muted); white-space: nowrap; }
+    .project p { color: var(--muted); font-size: 15px; }
+    .metric { margin-top: 12px; font-size: 13px; color: var(--accent); }
+    .tags { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
+    .tags span {
+      font-size: 12px; padding: 2px 8px; border-radius: 999px;
+      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+    }
+    .more { margin-top: 20px; font-size: 15px; }
+
+    /* Contact */
+    .links { list-style: none; display: grid; gap: 10px; }
+    .links li { display: flex; gap: 12px; }
+    .links .label { color: var(--muted); min-width: 80px; }
+
+    footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
+
+    @media (max-width: 520px) {
+      nav ul { gap: 14px; }
+      .hero { padding: 32px 0 40px; }
+      .project-head { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="wrap">
+    <nav>
+      <a href="#" class="logo">vv.</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="hero">
+      <img class="avatar" src="https://avatars.githubusercontent.com/u/89644500?v=4" alt="Vladimir Vutov">
+      <div class="hello mono">Hi there, my name is</div>
+      <h1>Vladimir Vutov.</h1>
+      <p>I build machine-learning systems with a statistician's eye, including
+  retrieval-augmented generation, model fine-tuning, and end-to-end MLOps pipelines,
+  with an emphasis on honest evaluation and reproducibility. </p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">See my work</a>
+        <a class="btn" href="https://github.com/fisherynwa">GitHub ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about">
+      <div class="wrap">
+        <h2>About</h2>
+        <p>My work sits where machine learning meets engineering. I care about choosing models
+           for good reasons: interpretable GAMs over black boxes when inspection matters,
+           proper hypothesis tests for drift, and held-out test sets that stay untouched until the
+           very end. I also insist on wrapping models in config-driven, tracked, containerised pipelines. </p>
+
+        <p>Lately I've been working on LLM retrieval systems (hybrid dense + lexical
+          search, contextual embeddings, LLM evaluation), systematic
+          hyperparameter tuning for vision transformers, and NLP applications.</p>
+        <div class="skills">
+          <span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>scikit-learn</span>
+          <span>RAG</span><span>FAISS</span><span>Weaviate</span><span>Ollama</span>
+          <span>MLflow</span><span>W&amp;B</span><span>Hydra</span><span>FastAPI</span>
+          <span>Docker</span><span>Prometheus</span><span>Grafana</span><span>R</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="wrap">
+        <h2>Projects</h2>
+        <div class="projects">
+
+          <a class="project" href="https://github.com/fisherynwa/paper-search">
+            <div class="project-head">
+              <h3>Paper Search</h3>
+              <span class="repo mono">paper-search</span>
+            </div>
+            <p>Hybrid semantic search and Q&amp;A over research papers. Combines FAISS dense
+              retrieval with BM25 via reciprocal rank fusion, enriches chunks with LLM-generated
+              context, answers with a local Qwen model, and scores answers with a validator pass.
+              Includes a Streamlit UI and a systematic benchmark suite.</p>
+            <div class="tags"><span>FAISS</span><span>BM25</span><span>Ollama</span><span>Streamlit</span><span>Hydra</span></div>
+          </a>
+
+          <a class="project" href="https://github.com/fisherynwa/ViT-histo">
+            <div class="project-head">
+              <h3>ViT for Breast Histopathology</h3>
+              <span class="repo mono">ViT-histo</span>
+            </div>
+            <p>Fine-tuning a Vision Transformer for tumour / no-tumour classification of
+              tissue patches, following Google's Deep Learning Tuning Playbook: quasi-random
+              sweeps, scientific vs. nuisance parameters, checkpoint selection and an untouched
+              test set.</p>
+            <div class="metric mono">Test ROC-AUC 0.96 · Brier 0.070</div>
+            <div class="tags"><span>PyTorch</span><span>Transformers</span><span>W&amp;B</span><span>Hydra</span></div>
+          </a>
+
+          <a class="project" href="https://github.com/fisherynwa/mlops-cycle">
+            <div class="project-head">
+              <h3>Insurance Cost MLOps</h3>
+              <span class="repo mono">mlops-cycle</span>
+            </div>
+            <p>End-to-end lifecycle for an interpretable GAM: Hydra-configured training, MLflow
+              tracking and champion/challenger registry, FastAPI/Google serving, drift detection with a
+              Anderson-Darling test and a two-proportion Z-test, and live Prometheus + Grafana dashboards.</p>
+            <div class="tags"><span>pygam</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Grafana</span></div>
+          </a>
+
+          <a class="project" href="https://github.com/fisherynwa/python-rag-data-science">
+            <div class="project-head">
+              <h3>Python Data-Extraction RAG</h3>
+              <span class="repo mono">python-rag-data-science</span>
+            </div>
+            <p>A fully local RAG assistant for pandas / scikit-learn questions, with Weaviate
+              hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow --
+              using a separate judge model to avoid self-preference bias.</p>
+            <div class="tags"><span>Weaviate</span><span>RAGAS</span><span>MLflow</span><span>Ollama</span></div>
+          </a>
+
+        </div>
+        <p class="more"><a href="https://github.com/fisherynwa?tab=repositories">See all repositories →</a></p>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="wrap">
+        <h2>Contact</h2>
+        <ul class="links">
+          <li><span class="label">GitHub</span><a href="https://github.com/fisherynwa">@fisherynwa</a></li>
+          <li><span class="label">Email</span><a href="vkvutov@gmail.com">vkvutov@gmail.com</a></li>
+          <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/vladimir-vutov-62aa7917a/">vutov</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© <span id="year"></span> Vladimir Vutov · Hosted on GitHub Pages</div>
+  </footer>
+
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
