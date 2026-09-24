@@ -4,121 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vladimir Vutov, PhD</title>
-  <meta name="description" content="Vladimir Vutov --machine learning, statistics and MLOps projects.">
- <link rel="icon" href="https://avatars.githubusercontent.com/u/89644500?v=4"> 
-  <style>
-    :root {
-      --bg: #faf8f5;
-      --surface: #ffffff;
-      --text: #1d1c1a;
-      --muted: #6b675f;
-      --accent: #d9480f;
-      --border: #e8e3da;
-      --max: 760px;
-    }
-    @media (prefers-color-scheme: dark) {
-      :root {
-        --bg: #151412;
-        --surface: #1e1c19;
-        --text: #eeebe5;
-        --muted: #a39e94;
-        --accent: #ff8a4c;
-        --border: #2e2b27;
-      }
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-
-    body {
-      background: var(--bg);
-      color: var(--text);
-      font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      line-height: 1.65;
-      font-size: 17px;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .wrap { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
-    .mono { font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; }
-
-    a { color: var(--accent); text-decoration: none; }
-    a:hover { text-decoration: underline; }
-
-    /* Nav */
-    nav { display: flex; justify-content: space-between; align-items: center; padding: 28px 0; }
-    nav .logo { font-weight: 700; color: var(--text); letter-spacing: -0.02em; }
-    nav ul { display: flex; gap: 22px; list-style: none; font-size: 15px; }
-    nav ul a { color: var(--muted); }
-    nav ul a:hover { color: var(--text); text-decoration: none; }
-
-    /* Hero */
-    .hero { padding: 56px 0 56px; }
-    .avatar {
-      width: 84px; height: 84px; border-radius: 50%;
-      border: 2px solid var(--border); margin-bottom: 22px; display: block;
-    }
-    .hero .hello { color: var(--accent); font-size: 14px; margin-bottom: 12px; }
-    .hero h1 {
-      font-size: clamp(2.2rem, 7vw, 3.4rem);
-      line-height: 1.1; letter-spacing: -0.035em; margin-bottom: 20px;
-    }
-    .hero p { color: var(--muted); font-size: 1.15rem; max-width: 36em; }
-    .hero .cta { margin-top: 28px; display: flex; gap: 12px; flex-wrap: wrap; }
-    .btn {
-      display: inline-block; padding: 10px 18px; border-radius: 8px;
-      font-weight: 600; font-size: 15px; border: 1px solid var(--border);
-      color: var(--text); background: var(--surface); transition: transform .15s;
-    }
-    .btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
-    .btn:hover { text-decoration: none; transform: translateY(-1px); }
-
-    /* Sections */
-    section { padding: 48px 0; border-top: 1px solid var(--border); }
-    h2 {
-      font-size: 13px; text-transform: uppercase; letter-spacing: 0.12em;
-      color: var(--muted); margin-bottom: 24px; font-weight: 600;
-    }
-    section > .wrap > p + p { margin-top: 14px; }
-
-    .skills { margin-top: 22px; display: flex; flex-wrap: wrap; gap: 8px; }
-    .skills span {
-      font-size: 13px; padding: 4px 10px; border-radius: 999px;
-      background: var(--surface); border: 1px solid var(--border); color: var(--muted);
-    }
-
-    /* Projects */
-    .projects { display: grid; gap: 16px; }
-    .project {
-      display: block; padding: 22px 24px; border-radius: 12px;
-      background: var(--surface); border: 1px solid var(--border);
-      color: var(--text); transition: border-color .15s, transform .15s;
-    }
-    .project:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
-    .project-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 6px; }
-    .project h3 { font-size: 1.1rem; }
-    .project .repo { font-size: 12px; color: var(--muted); white-space: nowrap; }
-    .project p { color: var(--muted); font-size: 15px; }
-    .metric { margin-top: 12px; font-size: 13px; color: var(--accent); }
-    .tags { margin-top: 12px; display: flex; gap: 6px; flex-wrap: wrap; }
-    .tags span {
-      font-size: 12px; padding: 2px 8px; border-radius: 999px;
-      background: var(--bg); border: 1px solid var(--border); color: var(--muted);
-    }
-    .more { margin-top: 20px; font-size: 15px; }
-
-    /* Contact */
-    .links { list-style: none; display: grid; gap: 10px; }
-    .links li { display: flex; gap: 12px; }
-    .links .label { color: var(--muted); min-width: 80px; }
-
-    footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
-
-    @media (max-width: 520px) {
-      nav ul { gap: 14px; }
-      .hero { padding: 32px 0 40px; }
-      .project-head { flex-direction: column; gap: 2px; }
-    }
-  </style>
+  <meta name="description" content="Vladimir Vutov — machine learning, statistics and MLOps projects.">
+  <link rel="icon" href="https://avatars.githubusercontent.com/u/89644500?v=4">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -137,12 +25,18 @@
       <div class="hello mono">Hi there, my name is</div>
       <h1>Vladimir Vutov.</h1>
       <p>I build machine-learning systems with a statistician's eye, including
-  retrieval-augmented generation, model fine-tuning, and end-to-end MLOps pipelines,
-  with an emphasis on honest evaluation and reproducibility. </p>
+        retrieval-augmented generation, model fine-tuning, and end-to-end MLOps pipelines,
+        with an emphasis on honest evaluation and reproducibility.</p>
       <div class="cta">
         <a class="btn primary" href="#projects">See my work</a>
         <a class="btn" href="https://github.com/fisherynwa">GitHub ↗</a>
       </div>
+      <svg class="hero-plot" viewBox="0 0 720 170" role="img" aria-label="Data points with a smooth fitted curve and confidence band">
+        <line class="axis" x1="10" y1="166" x2="710" y2="166"/>
+        <polygon class="band" points="10.0,117.5 17.1,112.4 24.1,107.5 31.2,102.8 38.3,98.4 45.4,94.3 52.4,90.4 59.5,86.8 66.6,83.6 73.6,80.7 80.7,78.1 87.8,75.9 94.8,74.1 101.9,72.6 109.0,71.4 116.1,70.7 123.1,70.3 130.2,70.2 137.3,70.5 144.3,71.1 151.4,72.0 158.5,73.3 165.6,74.8 172.6,76.6 179.7,78.6 186.8,80.8 193.8,83.3 200.9,85.9 208.0,88.7 215.1,91.5 222.1,94.5 229.2,97.6 236.3,100.7 243.3,103.8 250.4,106.9 257.5,110.0 264.5,113.0 271.6,116.0 278.7,118.8 285.8,121.5 292.8,124.0 299.9,126.4 307.0,128.6 314.0,130.5 321.1,132.2 328.2,133.7 335.3,135.0 342.3,135.9 349.4,136.6 356.5,137.0 363.5,137.0 370.6,136.4 377.7,135.6 384.7,134.5 391.8,133.1 398.9,131.4 406.0,129.5 413.0,127.3 420.1,124.8 427.2,122.1 434.2,119.2 441.3,116.1 448.4,112.7 455.5,109.2 462.5,105.5 469.6,101.7 476.7,97.8 483.7,93.8 490.8,89.7 497.9,85.5 504.9,81.3 512.0,77.1 519.1,72.9 526.2,68.7 533.2,64.5 540.3,60.4 547.4,56.5 554.4,52.6 561.5,48.8 568.6,45.2 575.7,41.7 582.7,38.4 589.8,35.3 596.9,32.3 603.9,29.6 611.0,27.1 618.1,24.8 625.2,22.7 632.2,20.8 639.3,19.2 646.4,17.8 653.4,16.6 660.5,15.7 667.6,14.9 674.6,14.4 681.7,14.1 688.8,14.0 695.9,14.1 702.9,14.4 710.0,14.8 710.0,52.4 702.9,51.5 695.9,50.9 688.8,50.4 681.7,50.2 674.6,50.1 667.6,50.2 660.5,50.6 653.4,51.1 646.4,51.9 639.3,53.0 632.2,54.2 625.2,55.7 618.1,57.4 611.0,59.3 603.9,61.5 596.9,63.8 589.8,66.4 582.7,69.1 575.7,72.1 568.6,75.2 561.5,78.4 554.4,81.8 547.4,85.3 540.3,88.9 533.2,92.6 526.2,96.4 519.1,100.2 512.0,104.0 504.9,107.8 497.9,111.7 490.8,115.5 483.7,119.2 476.7,122.8 469.6,126.4 462.5,129.8 455.5,133.1 448.4,136.2 441.3,139.2 434.2,142.0 427.2,144.5 420.1,146.8 413.0,148.9 406.0,150.7 398.9,152.3 391.8,153.6 384.7,154.6 377.7,155.3 370.6,155.8 363.5,155.9 356.5,156.0 349.4,156.0 342.3,155.7 335.3,155.1 328.2,154.2 321.1,153.1 314.0,151.8 307.0,150.2 299.9,148.4 292.8,146.4 285.8,144.3 278.7,141.9 271.6,139.5 264.5,137.0 257.5,134.3 250.4,131.6 243.3,128.9 236.3,126.1 229.2,123.4 222.1,120.7 215.1,118.1 208.0,115.6 200.9,113.2 193.8,111.0 186.8,108.9 179.7,107.0 172.6,105.4 165.6,104.0 158.5,102.9 151.4,102.0 144.3,101.5 137.3,101.2 130.2,101.3 123.1,101.8 116.1,102.6 109.0,103.7 101.9,105.2 94.8,107.1 87.8,109.3 80.7,111.9 73.6,114.8 66.6,118.1 59.5,121.7 52.4,125.7 45.4,129.9 38.3,134.5 31.2,139.3 24.1,144.3 17.1,149.6 10.0,155.1"/>
+        <path class="fit" d="M10.0,136.3 L17.1,131.0 L24.1,125.9 L31.2,121.0 L38.3,116.4 L45.4,112.1 L52.4,108.0 L59.5,104.3 L66.6,100.8 L73.6,97.8 L80.7,95.0 L87.8,92.6 L94.8,90.6 L101.9,88.9 L109.0,87.6 L116.1,86.6 L123.1,86.0 L130.2,85.8 L137.3,85.9 L144.3,86.3 L151.4,87.0 L158.5,88.1 L165.6,89.4 L172.6,91.0 L179.7,92.8 L186.8,94.9 L193.8,97.1 L200.9,99.5 L208.0,102.1 L215.1,104.8 L222.1,107.6 L229.2,110.5 L236.3,113.4 L243.3,116.4 L250.4,119.3 L257.5,122.2 L264.5,125.0 L271.6,127.7 L278.7,130.4 L285.8,132.9 L292.8,135.2 L299.9,137.4 L307.0,139.4 L314.0,141.1 L321.1,142.7 L328.2,144.0 L335.3,145.0 L342.3,145.8 L349.4,146.3 L356.5,146.5 L363.5,146.5 L370.6,146.1 L377.7,145.5 L384.7,144.5 L391.8,143.3 L398.9,141.9 L406.0,140.1 L413.0,138.1 L420.1,135.8 L427.2,133.3 L434.2,130.6 L441.3,127.6 L448.4,124.5 L455.5,121.2 L462.5,117.7 L469.6,114.1 L476.7,110.3 L483.7,106.5 L490.8,102.6 L497.9,98.6 L504.9,94.6 L512.0,90.5 L519.1,86.5 L526.2,82.5 L533.2,78.6 L540.3,74.7 L547.4,70.9 L554.4,67.2 L561.5,63.6 L568.6,60.2 L575.7,56.9 L582.7,53.8 L589.8,50.8 L596.9,48.1 L603.9,45.5 L611.0,43.2 L618.1,41.1 L625.2,39.2 L632.2,37.5 L639.3,36.1 L646.4,34.9 L653.4,33.9 L660.5,33.1 L667.6,32.6 L674.6,32.2 L681.7,32.1 L688.8,32.2 L695.9,32.5 L702.9,32.9 L710.0,33.6"/>
+        <g class="pts"><circle cx="27" cy="113" r="3.2"/><circle cx="28" cy="131" r="3.2"/><circle cx="32" cy="122" r="3.2"/><circle cx="48" cy="109" r="3.2"/><circle cx="54" cy="107" r="3.2"/><circle cx="132" cy="101" r="3.2"/><circle cx="153" cy="86" r="3.2"/><circle cx="159" cy="71" r="3.2"/><circle cx="169" cy="109" r="3.2"/><circle cx="175" cy="81" r="3.2"/><circle cx="190" cy="94" r="3.2"/><circle cx="195" cy="106" r="3.2"/><circle cx="211" cy="78" r="3.2"/><circle cx="226" cy="100" r="3.2"/><circle cx="228" cy="125" r="3.2"/><circle cx="272" cy="127" r="3.2"/><circle cx="323" cy="136" r="3.2"/><circle cx="337" cy="148" r="3.2"/><circle cx="338" cy="137" r="3.2"/><circle cx="358" cy="147" r="3.2"/><circle cx="363" cy="138" r="3.2"/><circle cx="369" cy="128" r="3.2"/><circle cx="370" cy="155" r="3.2"/><circle cx="396" cy="140" r="3.2"/><circle cx="436" cy="136" r="3.2"/><circle cx="442" cy="126" r="3.2"/><circle cx="444" cy="141" r="3.2"/><circle cx="447" cy="132" r="3.2"/><circle cx="489" cy="106" r="3.2"/><circle cx="545" cy="61" r="3.2"/><circle cx="557" cy="52" r="3.2"/><circle cx="560" cy="81" r="3.2"/><circle cx="576" cy="67" r="3.2"/><circle cx="611" cy="35" r="3.2"/><circle cx="627" cy="64" r="3.2"/><circle cx="640" cy="42" r="3.2"/><circle cx="689" cy="33" r="3.2"/><circle cx="693" cy="17" r="3.2"/></g>
+      </svg>
     </div>
   </header>
 
@@ -151,13 +45,21 @@
       <div class="wrap">
         <h2>About</h2>
         <p>My work sits where machine learning meets engineering. I care about choosing models
-           for good reasons: interpretable GAMs over black boxes when inspection matters,
-           proper hypothesis tests for drift, and held-out test sets that stay untouched until the
-           very end. I also insist on wrapping models in config-driven, tracked, containerised pipelines. </p>
+          for good reasons: interpretable GAMs over black boxes when inspection matters,
+          proper hypothesis tests for drift, and held-out test sets that stay untouched until the
+          very end. I also insist on wrapping models in config-driven, tracked, containerised pipelines.</p>
+
+        <p>My PhD research focused on developing novel analytical methods for matrix-assisted
+  laser desorption/ionization mass spectrometry imaging (MALDI-MSI) data. I'm particularly
+  interested in interpretable models, uncertainty quantification, boosting methods, and
+  causal inference.</p>
 
         <p>Lately I've been working on LLM retrieval systems (hybrid dense + lexical
           search, contextual embeddings, LLM evaluation), systematic
           hyperparameter tuning for vision transformers, and NLP applications.</p>
+
+    
+
         <div class="skills">
           <span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>scikit-learn</span>
           <span>RAG</span><span>FAISS</span><span>Weaviate</span><span>Ollama</span>
@@ -203,7 +105,7 @@
               <span class="repo mono">mlops-cycle</span>
             </div>
             <p>End-to-end lifecycle for an interpretable GAM: Hydra-configured training, MLflow
-              tracking and champion/challenger registry, FastAPI serving on Google Cloud, drift detection with an
+              tracking and champion/challenger registry, FastAPI serving, drift detection with an
               Anderson-Darling test and a two-proportion Z-test, and live Prometheus + Grafana dashboards.</p>
             <div class="tags"><span>pygam</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Grafana</span></div>
           </a>
@@ -214,7 +116,7 @@
               <span class="repo mono">python-rag-data-science</span>
             </div>
             <p>A fully local RAG assistant for pandas / scikit-learn questions, with Weaviate
-              hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow --
+              hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow,
               using a separate judge model to avoid self-preference bias.</p>
             <div class="tags"><span>Weaviate</span><span>RAGAS</span><span>MLflow</span><span>Ollama</span></div>
           </a>
@@ -229,7 +131,7 @@
         <h2>Contact</h2>
         <ul class="links">
           <li><span class="label">GitHub</span><a href="https://github.com/fisherynwa">@fisherynwa</a></li>
-          <li><span class="label">Email</span><a href="mailto:vkvutov@gmail.com">vkvutov@gmail.com</a>
+          <li><span class="label">Email</span><a href="mailto:vkvutov@gmail.com">vkvutov@gmail.com</a></li>
           <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/vladimir-vutov-62aa7917a/">vutov</a></li>
         </ul>
       </div>
