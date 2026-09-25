@@ -1,34 +1,30 @@
-/* Space theme colours */
+/* Colours: Graphite (minimal) */
 :root {
-  --bg: #05070d;
-  --surface: #0d121d;
-  --text: #eef1f7;
-  --muted: #9aa3b5;
-  --accent: #ffd23f;
-  --border: #1d2535;
+  --bg: #fafafa;
+  --surface: #ffffff;
+  --text: #111111;
+  --muted: #666666;
+  --accent: #2563eb;
+  --border: #e5e5e5;
+  --on-accent: #ffffff;
   --max: 760px;
-  color-scheme: dark;
 }
-
-/* Starfield */
-body {
-  background-color: var(--bg);
-  background-image:
-    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
-    radial-gradient(1px 1px at 90px 140px, rgba(255,255,255,.8), transparent),
-    radial-gradient(1.5px 1.5px at 160px 60px, #fff, transparent),
-    radial-gradient(1px 1px at 230px 190px, rgba(255,255,255,.6), transparent),
-    radial-gradient(1px 1px at 300px 100px, rgba(255,255,255,.9), transparent),
-    radial-gradient(1.5px 1.5px at 60px 230px, rgba(255,255,255,.7), transparent),
-    radial-gradient(1px 1px at 270px 20px, rgba(255,255,255,.5), transparent);
-  background-size: 320px 260px;
-  background-attachment: fixed;
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0b0c;
+    --surface: #151517;
+    --text: #f2f2f2;
+    --muted: #9a9a9f;
+    --accent: #60a5fa;
+    --border: #27272a;
+    --on-accent: #0b0b0c;
+  }
 }
-
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
+  background: var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.65;
@@ -67,7 +63,7 @@ nav ul a:hover { color: var(--text); text-decoration: none; }
   font-weight: 600; font-size: 15px; border: 1px solid var(--border);
   color: var(--text); background: var(--surface); transition: transform .15s;
 }
-.btn.primary { background: var(--accent); border-color: var(--accent); color: #fff; }
+.btn.primary { background: var(--accent); border-color: var(--accent); color: var(--on-accent); }
 .btn:hover { text-decoration: none; transform: translateY(-1px); }
 
 /* Sections */
@@ -111,6 +107,29 @@ section > .wrap > p + p { margin-top: 14px; }
 .hero-plot .fit { fill: none; stroke: var(--accent); stroke-width: 2.5; stroke-linecap: round; }
 .hero-plot .pts circle { fill: var(--muted); opacity: 0.55; }
 
+/* Availability line */
+.status {
+  display: inline-flex; align-items: center; gap: 8px; margin-top: 18px;
+  font-size: 14px; color: var(--muted);
+  padding: 5px 12px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface);
+}
+.status .dot { width: 8px; height: 8px; border-radius: 50%; background: #2fb344; box-shadow: 0 0 0 3px rgba(47,179,68,.18); }
+
+/* Experience timeline */
+.timeline { list-style: none; display: grid; gap: 26px; }
+.timeline li { display: grid; grid-template-columns: 130px 1fr; gap: 20px; }
+.timeline .when { font-size: 13px; color: var(--muted); padding-top: 3px; }
+.timeline .what { font-weight: 600; }
+.timeline .where { color: var(--muted); font-size: 15px; }
+.timeline p { color: var(--muted); font-size: 15px; margin-top: 4px; }
+
+/* Project thumbnails */
+.project { padding: 0; overflow: hidden; }
+.project-body { padding: 20px 24px 22px; }
+.thumb { height: 190px; background: #fff; border-bottom: 1px solid var(--border); overflow: hidden; }
+.thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
+.thumb.contain img { object-fit: contain; object-position: center; padding: 10px; }
+
 /* Contact */
 .links { list-style: none; display: grid; gap: 10px; }
 .links li { display: flex; gap: 12px; }
@@ -119,10 +138,11 @@ section > .wrap > p + p { margin-top: 14px; }
 footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; border-top: 1px solid var(--border); }
 
 @media (max-width: 520px) {
-  nav ul { gap: 14px; }
+  .timeline li { grid-template-columns: 1fr; gap: 2px; }
+  .thumb { height: 150px; }
+  nav { gap: 16px; }
+  nav ul { gap: 12px; font-size: 14px; }
+  .status { border-radius: 14px; }
   .hero { padding: 32px 0 40px; }
   .project-head { flex-direction: column; gap: 2px; }
 }
-
-/* Dark text on the gold button, so it stays readable */
-.btn.primary { color: #05070d; }

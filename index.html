@@ -6,10 +6,17 @@
   <title>Vladimir Vutov, PhD</title>
   <meta name="description" content="Vladimir Vutov — machine learning, statistics and MLOps projects.">
   <link rel="icon" href="https://avatars.githubusercontent.com/u/89644500?v=4">
+
+  <!-- Link preview when the page is shared (LinkedIn, Slack, WhatsApp, …) -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Vladimir Vutov, PhD">
+  <meta property="og:description" content="Machine learning, statistics and MLOps: RAG systems, model fine-tuning and end-to-end pipelines.">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/89644500?v=4">
+  <meta property="og:url" content="https://fisherynwa.github.io/">
+  <meta name="twitter:card" content="summary">
+
   <link rel="stylesheet" href="style.css">
 </head>
-<script data-goatcounter="https://vutov.goatcounter.com/count"
-        async src="//gc.zgo.at/count.js"></script>
 <body>
 
   <header class="wrap">
@@ -17,6 +24,7 @@
       <a href="#" class="logo">vv.</a>
       <ul>
         <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -29,8 +37,10 @@
       <p>I build machine-learning systems with a statistician's eye, including
         retrieval-augmented generation, model fine-tuning, and end-to-end MLOps pipelines,
         with an emphasis on honest evaluation and reproducibility.</p>
+      <div class="status"><span class="dot"></span>Open to ML engineering and (Applied) Data Science roles</div>
       <div class="cta">
         <a class="btn primary" href="#projects">See my work</a>
+        <!--   <a class="btn" href="cv.pdf" download>CV ↓</a>↓</a> -->
         <a class="btn" href="https://github.com/fisherynwa">GitHub ↗</a>
       </div>
       <svg class="hero-plot" viewBox="0 0 720 170" role="img" aria-label="Data points with a smooth fitted curve and confidence band">
@@ -51,17 +61,21 @@
           proper hypothesis tests for drift, and held-out test sets that stay untouched until the
           very end. I also insist on wrapping models in config-driven, tracked, containerised pipelines.</p>
 
-        <p>My PhD research focused on developing novel analytical methods for matrix-assisted
-  laser desorption/ionization mass spectrometry imaging (MALDI-MSI) data. I'm particularly
-  interested in interpretable models, uncertainty quantification, boosting methods, and
-  causal inference.</p>
+        <p>My PhD research focused on developing novel analytical methods for MALDI mass
+          spectrometry imaging data, which maps the molecular makeup of tissue samples.
+          I'm particularly interested in interpretable models, uncertainty quantification,
+          boosting methods, and causal inference.</p>
 
         <p>Lately I've been working on LLM retrieval systems (hybrid dense + lexical
           search, contextual embeddings, LLM evaluation), systematic
           hyperparameter tuning for vision transformers, and NLP applications.</p>
 
-    
-<p>In my spare time: 🎣 fishing · 🥾 hiking · ⚽ football · 🎶 vinyl · 📚 novels</p>
+        <p>A few reads and ideas that have really shaped how I think about problems:
+          Leo Breiman's classic "Two Cultures" paper, Jerome Friedman's work on gradient boosting,
+          Trevor Hastie and Robert Tibshirani's foundational work on GAMs, and Simon Wood's
+          work on smoothing and GAMs.</p>
+
+        <p>In my spare time, I enjoy fishing 🎣, hiking 🥾, football ⚽, listening to vinyl 🎶, and reading novels 📚.</p>
 
         <div class="skills">
           <span>Python</span><span>PyTorch</span><span>Hugging Face</span><span>scikit-learn</span>
@@ -71,6 +85,38 @@
         </div>
       </div>
     </section>
+<!--
+    <section id="experience">
+      <div class="wrap">
+        <h2>Experience &amp; Education</h2>
+        <ol class="timeline">
+          <li>
+            <div class="when mono">[2024 - now]</div>
+            <div>
+              <div class="what">[Job title]</div>
+              <div class="where">[Company or institute], [City]</div>
+              <p>[One or two lines on what you do or achieved there.]</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">[2019 - 2024]</div>
+            <div>
+              <div class="what">PhD, [Field, e.g. Statistics]</div>
+              <div class="where">[University], [City]</div>
+              <p>Novel analytical methods for MALDI mass spectrometry imaging data.</p>
+            </div>
+          </li>
+          <li>
+            <div class="when mono">[2017 - 2019]</div>
+            <div>
+              <div class="what">MSc, [Field]</div>
+              <div class="where">[University], [City]</div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+-->
 
     <section id="projects">
       <div class="wrap">
@@ -78,50 +124,62 @@
         <div class="projects">
 
           <a class="project" href="https://github.com/fisherynwa/paper-search" data-goatcounter-click="project-paper-search">
-            <div class="project-head">
-              <h3>Paper Search</h3>
-              <span class="repo mono">paper-search</span>
+            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/paper-search/main/images/demo_compressed.gif" alt="PaperSearch app demo" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Paper Search</h3>
+                <span class="repo mono">paper-search</span>
+              </div>
+              <p>Hybrid semantic search and Q&amp;A over research papers. Combines FAISS dense
+                retrieval with BM25 via reciprocal rank fusion, enriches chunks with LLM-generated
+                context, answers with a local Qwen model, and scores answers with a validator pass.
+                Includes a Streamlit UI and a systematic benchmark suite.</p>
+              <div class="tags"><span>FAISS</span><span>BM25</span><span>Ollama</span><span>Streamlit</span><span>Hydra</span></div>
             </div>
-            <p>Hybrid semantic search and Q&amp;A over research papers. Combines FAISS dense
-              retrieval with BM25 via reciprocal rank fusion, enriches chunks with LLM-generated
-              context, answers with a local Qwen model, and scores answers with a validator pass.
-              Includes a Streamlit UI and a systematic benchmark suite.</p>
-            <div class="tags"><span>FAISS</span><span>BM25</span><span>Ollama</span><span>Streamlit</span><span>Hydra</span></div>
           </a>
 
           <a class="project" href="https://github.com/fisherynwa/ViT-histo" data-goatcounter-click="project-vit-histo">
-            <div class="project-head">
-              <h3>ViT for Breast Histopathology</h3>
-              <span class="repo mono">ViT-histo</span>
+            <div class="thumb contain"><img src="https://raw.githubusercontent.com/fisherynwa/ViT-histo/main/figures/label1_samples.png" alt="Sample tumour tissue patches" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>ViT for Breast Histopathology</h3>
+                <span class="repo mono">ViT-histo</span>
+              </div>
+              <p>Fine-tuning a Vision Transformer for tumour / no-tumour classification of
+                tissue patches, following Google's Deep Learning Tuning Playbook: quasi-random
+                sweeps, scientific vs. nuisance parameters, checkpoint selection and an untouched
+                test set.</p>
+              <div class="metric mono">Test ROC-AUC 0.96 · Brier 0.070</div>
+              <div class="tags"><span>PyTorch</span><span>Transformers</span><span>W&amp;B</span><span>Hydra</span></div>
             </div>
-            <p>Fine-tuning a Vision Transformer for tumour / no-tumour classification of
-              tissue patches, following Google's Deep Learning Tuning Playbook: quasi-random
-              sweeps, scientific vs. nuisance parameters, checkpoint selection and an untouched
-              test set.</p>
-            <div class="metric mono">Test ROC-AUC 0.96 · Brier 0.070</div>
-            <div class="tags"><span>PyTorch</span><span>Transformers</span><span>W&amp;B</span><span>Hydra</span></div>
           </a>
 
           <a class="project" href="https://github.com/fisherynwa/mlops-cycle" data-goatcounter-click="project-mlops-cycle">
-            <div class="project-head">
-              <h3>Insurance Cost MLOps</h3>
-              <span class="repo mono">mlops-cycle</span>
+            <div class="thumb"><img src="https://raw.githubusercontent.com/fisherynwa/mlops-cycle/main/docs/grafana.gif" alt="Grafana dashboard showing prediction drift" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Insurance Cost MLOps</h3>
+                <span class="repo mono">mlops-cycle</span>
+              </div>
+              <p>End-to-end lifecycle for an interpretable GAM: Hydra-configured training, MLflow
+                tracking and champion/challenger registry, FastAPI serving, drift detection with an
+                Anderson-Darling test and a two-proportion Z-test, and live Prometheus + Grafana dashboards.</p>
+              <div class="tags"><span>pygam</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Grafana</span></div>
             </div>
-            <p>End-to-end lifecycle for an interpretable GAM: Hydra-configured training, MLflow
-              tracking and champion/challenger registry, FastAPI serving, drift detection with an
-              Anderson-Darling test and a two-proportion Z-test, and live Prometheus + Grafana dashboards.</p>
-            <div class="tags"><span>pygam</span><span>MLflow</span><span>FastAPI</span><span>Docker</span><span>Grafana</span></div>
           </a>
 
           <a class="project" href="https://github.com/fisherynwa/python-rag-data-science" data-goatcounter-click="project-rag">
-            <div class="project-head">
-              <h3>Python Data-Extraction RAG</h3>
-              <span class="repo mono">python-rag-data-science</span>
+            <div class="thumb contain"><img src="https://raw.githubusercontent.com/fisherynwa/python-rag-data-science/main/img/chunk_dist.png" alt="Document length distribution used to choose chunk size" loading="lazy"></div>
+            <div class="project-body">
+              <div class="project-head">
+                <h3>Python Data-Extraction RAG</h3>
+                <span class="repo mono">python-rag-data-science</span>
+              </div>
+              <p>A fully local RAG assistant for pandas / scikit-learn questions, with Weaviate
+                hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow,
+                using a separate judge model to avoid self-preference bias.</p>
+              <div class="tags"><span>Weaviate</span><span>RAGAS</span><span>MLflow</span><span>Ollama</span></div>
             </div>
-            <p>A fully local RAG assistant for pandas / scikit-learn questions, with Weaviate
-              hybrid search, data-driven chunk sizing, and RAGAS evaluation logged to MLflow,
-              using a separate judge model to avoid self-preference bias.</p>
-            <div class="tags"><span>Weaviate</span><span>RAGAS</span><span>MLflow</span><span>Ollama</span></div>
           </a>
 
         </div>
@@ -136,6 +194,7 @@
           <li><span class="label">GitHub</span><a href="https://github.com/fisherynwa" data-goatcounter-click="contact-github">@fisherynwa</a></li>
           <li><span class="label">Email</span><a href="mailto:vkvutov@gmail.com" data-goatcounter-click="contact-email">vkvutov@gmail.com</a></li>
           <li><span class="label">LinkedIn</span><a href="https://www.linkedin.com/in/vladimir-vutov-62aa7917a/" data-goatcounter-click="contact-linkedin">vutov</a></li>
+          <!-- <li><span class="label">CV</span><a href="cv.pdf" download data-goatcounter-click="contact-cv">Download PDF</a></li> -->
         </ul>
       </div>
     </section>
@@ -146,5 +205,7 @@
   </footer>
 
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+  <!-- GoatCounter: replace "vutov" with your own GoatCounter code -->
+  <script data-goatcounter="https://vutov.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 </body>
 </html>
