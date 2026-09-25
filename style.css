@@ -1,30 +1,19 @@
-/* Colours: Graphite (minimal) */
+/* Colours: Space (always dark) */
 :root {
-  --bg: #fafafa;
-  --surface: #ffffff;
-  --text: #111111;
-  --muted: #666666;
-  --accent: #2563eb;
-  --border: #e5e5e5;
-  --on-accent: #ffffff;
+  --bg: #05070d;
+  --surface: #0d121d;
+  --text: #eef1f7;
+  --muted: #9aa3b5;
+  --accent: #ffd23f;
+  --border: #1d2535;
+  --on-accent: #05070d;
   --max: 760px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #0b0b0c;
-    --surface: #151517;
-    --text: #f2f2f2;
-    --muted: #9a9a9f;
-    --accent: #60a5fa;
-    --border: #27272a;
-    --on-accent: #0b0b0c;
-  }
+  color-scheme: dark;
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: var(--bg);
   color: var(--text);
   font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
   line-height: 1.65;
@@ -130,6 +119,19 @@ section > .wrap > p + p { margin-top: 14px; }
 .thumb img { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
 .thumb.contain img { object-fit: contain; object-position: center; padding: 10px; }
 
+/* Alma Mater */
+.schools { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+.school {
+  display: block; background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 18px 20px; color: var(--text);
+  transition: border-color .15s, transform .15s;
+}
+.school:hover { border-color: var(--accent); text-decoration: none; transform: translateY(-2px); }
+.school-name { font-weight: 600; font-size: 15px; line-height: 1.35; }
+.school-place { color: var(--muted); font-size: 13px; margin-top: 6px; }
+.school-detail { color: var(--accent); font-size: 13px; margin-top: 2px; }
+@media (max-width: 620px) { .schools { grid-template-columns: 1fr; } }
+
 /* Contact */
 .links { list-style: none; display: grid; gap: 10px; }
 .links li { display: flex; gap: 12px; }
@@ -145,4 +147,19 @@ footer { padding: 40px 0 56px; color: var(--muted); font-size: 14px; border-top:
   .status { border-radius: 14px; }
   .hero { padding: 32px 0 40px; }
   .project-head { flex-direction: column; gap: 2px; }
+}
+
+/* Starfield background */
+body {
+  background-color: var(--bg);
+  background-image:
+    radial-gradient(1px 1px at 20px 30px, #fff, transparent),
+    radial-gradient(1px 1px at 90px 140px, rgba(255,255,255,.8), transparent),
+    radial-gradient(1.5px 1.5px at 160px 60px, #fff, transparent),
+    radial-gradient(1px 1px at 230px 190px, rgba(255,255,255,.6), transparent),
+    radial-gradient(1px 1px at 300px 100px, rgba(255,255,255,.9), transparent),
+    radial-gradient(1.5px 1.5px at 60px 230px, rgba(255,255,255,.7), transparent),
+    radial-gradient(1px 1px at 270px 20px, rgba(255,255,255,.5), transparent);
+  background-size: 320px 260px;
+  background-attachment: fixed;
 }
